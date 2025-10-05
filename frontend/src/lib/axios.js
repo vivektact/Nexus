@@ -1,12 +1,11 @@
-import axios from 'axios';
+import axios from "axios";
 
-// 1. Create a new axios instance with a custom configuration
+const BASE_URL = import.meta.env.MODE === "development" ? "http://localhost:5000/api/v1" : "/api/v1";
+
 const axiosInstance = axios.create({
-  // Set the base URL for all API requests
-  baseURL: 'http://localhost:5000/api/v1', // <-- IMPORTANT: Replace with your actual backend URL
-  withCredentials: true,
+  baseURL: BASE_URL,
+  withCredentials: true, // send cookies with the request
 });
-
 
 export default axiosInstance;
 

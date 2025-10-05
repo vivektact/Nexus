@@ -12,9 +12,12 @@ import LearningPage from "../pages/LearningPage";
 import ProtectedRoute from "../components/ProtectedRoute"; 
 import useAuthUser from "../hooks/useAuthUser";
 import Layout from "../components/Layout";
+import useListenForNotifications from "../hooks/useListenForNotifications";
 
 const App = () => {
   const { authUser } = useAuthUser(); 
+
+     useListenForNotifications();
 
   const router = createBrowserRouter(
     createRoutesFromElements(

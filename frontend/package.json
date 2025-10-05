@@ -16,7 +16,7 @@
     "@heroui/react": "^2.8.2",
     "@stream-io/video-react-sdk": "^1.23.1",
     "@tailwindcss/vite": "^4.1.11",
-    "@tanstack/react-query": "^4.40.1",
+    "@tanstack/react-query": "^5.90.2",
     "axios": "^1.10.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.11",
@@ -26,6 +26,7 @@
     "react-dom": "^19.1.0",
     "react-hot-toast": "^2.5.2",
     "react-router-dom": "^7.7.0",
+    "socket.io-client": "^4.8.1",
     "stream-chat": "^9.20.3",
     "stream-chat-react": "^13.7.0",
     "tailwind-merge": "^3.3.1"
