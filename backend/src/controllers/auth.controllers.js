@@ -190,7 +190,7 @@ const login = asyncHandler(async (req, res) => {
   const cookieOptions = {
     httpOnly: true, // Can't access cookie via JS in browser
     secure: process.env.NODE_ENV === "production", // Only send over HTTPS in production
-    sameSite: "Strict", // Protection from CSRF
+    sameSite: "None", // Protection from CSRF
     maxAge: 5 * 24 * 60 * 60 * 1000,
     path: "/",
   }
