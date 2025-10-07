@@ -2,12 +2,15 @@ import http from "http";
 import { Server } from "socket.io";
 import app from "./app.js";
 import db from "./lib/db.js";
+import dotenv from "dotenv";
 dotenv.config({
   path: "./.env",
 });
+
 db(); 
 
 const port = process.env.PORT || 5000;
+console.log("Hey", port);
 
 const server = http.createServer(app);
 
