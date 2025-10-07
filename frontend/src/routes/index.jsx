@@ -5,6 +5,7 @@ import RegisterPage from "../pages/RegisterPage";
 import Dashboard from "../pages/Dashboard";
 import LoginPage from "../pages/LoginPage";
 import ChatPage from "../pages/ChatPage";
+import FriendPage from "../pages/FriendPage";
 import CallPage from "../pages/CallPage";
 import NotificationPage from "../pages/NotificationPage";
 import WelcomePage from "../pages/WelcomePage";
@@ -44,6 +45,16 @@ const App = () => {
             <ProtectedRoute>
               <Layout showSidebar={true}>
                 <Dashboard />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="friend"
+          element={
+            <ProtectedRoute>
+              <Layout showSidebar={true}>
+                <FriendPage />
               </Layout>
             </ProtectedRoute>
           }

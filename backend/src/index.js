@@ -3,7 +3,7 @@ import { Server } from "socket.io";
 import app from "./app.js";
 import db from "./lib/db.js";
 
-db(); // Assuming you are using this to connect to the database.
+db(); 
 
 const port = process.env.PORT || 5000;
 
@@ -11,14 +11,13 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: process.env.BASE_URL, // Assumes BASE_URL is set in your .env file
+        origin: process.env.BASE_URL,
         methods: ["GET", "POST"],
     },
 });
 
 const onlineUsers = {};
 
-// WebSocket logic for handling users
 io.on("connection", (socket) => {
     console.log("A user connected:", socket.id);
 

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "NexusMeet is a full-stack web application designed to connect language learners from around the world. It provides a platform for users to find native speakers of their target language, become friends, and engage in real-time conversations to improve their fluency.",
   "main": "index.js",
+  
   "scripts": {
     "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
     "start": "npm run start --prefix backend"
@@ -14,7 +15,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/vivektact/Nexus/issues"
   },
