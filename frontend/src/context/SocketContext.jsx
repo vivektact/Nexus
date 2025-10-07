@@ -14,7 +14,7 @@ export const SocketContextProvider = ({ children }) => {
 
     useEffect(() => {
         if (authUser) {
-            const newSocket = io("http://localhost:5000", { // Your backend URL
+            const newSocket = io("https://nexus-backend-bmt3.onrender.com", { // Your backend URL
                 query: {
                     userId: authUser._id,
                 },
