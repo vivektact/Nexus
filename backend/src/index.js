@@ -16,7 +16,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: process.env.BASE_URL,
+        origin: "https://nexus-frontend-0r8u.onrender.com",
         methods: ["GET", "POST"],
     },
 });
