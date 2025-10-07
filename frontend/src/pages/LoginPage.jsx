@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-hot-toast";
 import axiosInstance from "../lib/axios";
+import axios from "axios";
 
 function LoginPage() {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -10,7 +11,7 @@ function LoginPage() {
 
   // Mutation for login
   const loginMutation = useMutation({
-    mutationFn: (data) => axiosInstance.post("/auth/login", data),
+    mutationFn: (data) => axios.post("https://nexus-backend-bmt3.onrender.com/api/v1/auth/login", data),
     onSuccess: (response) => {
       toast.success(response.data.message || "Login successful");
       navigate("/dashboard");
