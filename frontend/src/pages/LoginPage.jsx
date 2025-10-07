@@ -10,7 +10,7 @@ function LoginPage() {
 
   // Mutation for login
   const loginMutation = useMutation({
-    mutationFn: (data) => axiosInstance.get("/auth/login", data),
+    mutationFn: (data) => axiosInstance.post("/auth/login", data),
     onSuccess: (response) => {
       toast.success(response.data.message || "Login successful");
       navigate("/dashboard");
