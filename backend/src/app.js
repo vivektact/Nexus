@@ -16,9 +16,9 @@ const app = express();
 console.log(process.env.BASE_URL);
 app.use(
   cors({
-    origin: "*",
+    origin: "https://nexus-frontend-0r8u.onrender.com",
     credentials: true,
-    methods: ["GET", "POST", "DELETE", "OPTIONS", "PUT"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
